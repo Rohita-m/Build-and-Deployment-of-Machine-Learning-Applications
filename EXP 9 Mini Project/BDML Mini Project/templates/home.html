@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stock Price Prediction</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+
+.head {
+    color: #164e8c;
+}
+
+.bt {
+    background-color: #164e8c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eef5ff;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+</head>
+
+<body style="background-color: #eef5ff; font-family: Arial, sans-serif;">
+
+<!-- Header Section -->
+
+<div class="container">
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+
+<a href="/"
+class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+
+<img src="/static/image/stock_icon.png"
+width="50px"
+height="50px"
+class="rounded shadow-lg"
+alt="">
+
+<span class="fs-3 m-3 fw-bold head">
+<i class="fas fa-chart-line"></i>
+Stock Price Prediction
+</span>
+
+</a>
+
+<ul class="nav nav-pills">
+
+<li class="nav-item">
+<a href="{{ url_for('home') }}"
+class="nav-link link-light"
+style="background-color: #164e8c">
+Home
+</a>
+</li>
+
+<li class="nav-item">
+<a href="#features"
+class="nav-link"
+style="color:#164e8c">
+Features
+</a>
+</li>
+
+<li class="nav-item">
+<a href="#about"
+class="nav-link"
+style="color:#164e8c">
+About
+</a>
+</li>
+
+<li class="nav-item">
+<a href="{{ url_for('register') }}"
+class="nav-link"
+style="color:#164e8c">
+Register
+</a>
+</li>
+
+<li class="nav-item">
+<a href="{{ url_for('login') }}"
+class="nav-link"
+style="color:#164e8c">
+Login
+</a>
+</li>
+
+<li class="nav-item">
+
+<a href="{{ url_for('login') }}"
+class="btn btn-lg text-light fw-bold"
+style="background-color:#164e8c">
+Get Started
+</a>
+
+</li>
+
+</ul>
+
+</header>
+
+</div>
+
+
+<!-- Hero Section -->
+
+<div class="container col-xxl-8">
+
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+<div class="col-10 col-sm-8 col-lg-6 animate animated animate__zoomIn">
+
+<img src="/static/image/stock.png"
+class="d-block mx-lg-auto img-fluid"
+alt="Stock Market"
+width="700"
+height="500"
+loading="lazy">
+
+</div>
+
+<div class="col-lg-6 animate animated animate__slideInLeft"
+style="color:black;">
+
+<h1 class="display-5 fw-bold lh-1 mb-3"
+style="color:#164e8c">
+
+Stock Price Prediction
+
+</h1>
+
+<p class="lead">
+
+Stock Price Prediction estimates stock values using machine
+learning models based on features like opening price, highest
+price, lowest price, volume, and market trends.
+
+</p>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+<a href="/login">
+
+<button type="button"
+class="btn btn-lg px-4 me-md-2 text-light fw-bold"
+style="background-color:#164e8c">
+
+Get Started
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Features Section -->
+
+<div class="container py-5" id="features">
+
+<h2 class="text-center head animate animated animate__fadeInDown"
+style="color:#164e8c;">
+
+Features
+
+</h2>
+
+<div class="row text-center">
+
+<div class="col-md-4 animate animated animate__zoomIn">
+
+<h4 style="color:#286090">
+
+<i class="fas fa-chart-line"></i>
+Accurate Predictions
+
+</h4>
+
+<p>
+Our model uses advanced machine learning algorithms to estimate
+stock prices with high accuracy.
+</p>
+
+</div>
+
+<div class="col-md-4 animate animated animate__zoomIn">
+
+<h4 style="color:#286090">
+
+<i class="fas fa-clock"></i>
+Real-Time Data
+
+</h4>
+
+<p>
+Stay updated with real-time stock market trends and price changes.
+</p>
+
+</div>
+
+<div class="col-md-4 animate animated animate__zoomIn">
+
+<h4 style="color:#286090">
+
+<i class="fas fa-user"></i>
+User-Friendly
+
+</h4>
+
+<p>
+Easy-to-use interface for investors, traders, and analysts.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- About Section -->
+
+<div class="container py-5" id="about">
+
+<h2 class="text-center head animate animated animate__fadeInLeft"
+style="color:#164e8c;">
+
+About Us
+
+</h2>
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<p>
+
+Stock Price Prediction is a tool that utilizes machine learning
+to estimate stock values based on key features like historical
+data, market trends, and economic indicators. Our goal is to
+provide reliable and insightful predictions to help investors
+make informed decisions.
+
+</p>
+
+</div>
+
+<div class="col-md-6 animate animated animate__fadeInRight">
+
+<img src="/static/image/stock_llllll.avif"
+class="img-fluid rounded"
+alt="About Us">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Footer Section -->
+
+<div class="container">
+
+<footer class="py-3 my-4">
+
+<p class="text-center text-body-secondary">
+&copy; 2025 Company, Inc
+</p>
+
+</footer>
+
+</div>
+
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
